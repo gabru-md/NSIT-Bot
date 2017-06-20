@@ -28,6 +28,7 @@ class trainer(object):
     """
     
     def __init__(self,name):
+
         """
         initialize the trainer with a name.
         """
@@ -57,6 +58,7 @@ class trainer(object):
         
         Checking for each training file 
         """
+        os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
         new_loc = os.getcwd() + "\\" + path
         os.chdir(new_loc)
         list_trainer_files = os.listdir(new_loc)
