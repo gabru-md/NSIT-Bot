@@ -2,8 +2,8 @@
 
 # NSIT-Bot
 
-NSIT Bot is a chatter bot engine built using standard Machine Learning techniques and [Telegram](https://telegram.org/) Bot API.
-The Purpose of this Bot Engine is to provide instant solutions to the queries by the future NSITians or our lovely 'fuchas'.
+[NSIT Bot](https://github.com/gabru-md/NSIT-Bot) is a chatter bot engine built using standard Machine Learning techniques and [Telegram](https://telegram.org/) Bot API.
+The Purpose of this Bot Engine is to provide instant solutions, on the mobile chatting app Telegram, to the queries by the future NSITians or our lovely 'fuchas'.
 
 # Dependencies
     * Sci-Kit Learn
