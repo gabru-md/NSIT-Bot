@@ -15,7 +15,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 from sklearn.naive_bayes import MultinomialNB
 
-os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
+
 
 class trainer(object):
     """
