@@ -12,6 +12,8 @@ class NSITBot(object):
         
         self.__owner__ = kwargs.get('owner','NSIT 2020')
         
+        self.__version__ = kwargs.get('version','Test')
+        
         """
         creating an instance of trainer inside NSITBot
         """
@@ -56,7 +58,24 @@ class NSITBot(object):
         
         return self.prediction
         
-        
+    
 
+""" 
+There is no need to train the bot as the bot is trained automatically before 
+the prediction phase starts.
+
+prediction function can be found inside the trainer.py file and may be changed
+depending upon the user.
+
+the 'getClassifier' function inside the main class automatically invokes
+the trainer to train our bot on all previously available data in form of 
+.TRAINER files
+"""
+
+bot = NSITBot(
+    name="My First Bot",
+    owner="Manish Devgan",
+    version="0.0.1" 
+)
 
 
