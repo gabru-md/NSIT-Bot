@@ -13,7 +13,7 @@ The Purpose of this Bot Engine is to provide instant solutions to the queries by
     * OS
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
-Site will act as a webHook for the Telegram Bot.So backend developers in Python are required.
+Site will act as a webHook for the Telegram bot. So backend developers in Python are required.
 #### Either of the two
     * Flask
     * Django
