@@ -1,3 +1,8 @@
+"""
+@Author : Manish Devgan
+@Github : https://github.com/gabru-md
+@Language : Python 2.7
+"""
 import sys
 sys.path.append('..//')
 
