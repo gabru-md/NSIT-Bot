@@ -13,10 +13,13 @@ The Purpose of this Bot Engine is to provide instant solutions, on the mobile ch
     * OS
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
-Site will act as a webHook for the Telegram bot. So backend developers in Python are required.
-#### Either of the two
+Site will act as a webHook for the Telegram bot. So backend developers in Python/PHP are required. 
+#### Either of the three
     * Flask
     * Django
+    * PHP
+
+Backend will be FCFS.
 
 ### NSIT Bot is currently under development and will take a lot of time to complete.
 #### The Project calls for interested people to join and make it big.
