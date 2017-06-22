@@ -58,8 +58,8 @@ class trainer(object):
         
         Checking for each training file 
         """
-        os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
-        new_loc = os.getcwd() + "\\" + path
+        #os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
+        new_loc = os.getcwd()
         os.chdir(new_loc)
         list_trainer_files = os.listdir(new_loc)
         dataList = []
