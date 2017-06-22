@@ -1,9 +1,18 @@
+from fuzzywuzzy import fuzz
+import pandas as pd
 
 from trainer import trainer as Train
 
 """
 NSIT Bot main class
 """
+
+"""
+method to find similarity in the strings
+"""
+def sim(str1,str2):
+    return fuzz.token_sort_ratio(str1,str2) * 0.01
+    
 
 class NSITBot(object):
     def __init__(self,**kwargs):
@@ -22,6 +31,7 @@ class NSITBot(object):
         name = 'TrainerBot' 
         )
         
+        self.hello_bot = ['bot_action','bot_author','bot_name','bot_version','hello']
         
         """
         fetching the classifier and vectorizer that 
@@ -56,9 +66,47 @@ class NSITBot(object):
         the function will now return the prediction as a list
         """
         
-        return self.prediction
+        return [self.message_toLower,self.prediction[0]]
+   
+    def generateResponse(self,botPredict):
+        """
+        method to generate responses based on the query/
+        message and the type of message
+        """
+        message_tolower = botPredict[0]
+        prediction = botPredict[1]
+        if prediction in self.hello_bot:
+            self.response = self.getBotResponse(message_tolower,prediction)
+        else:
+            self.response = "idk"
         
-    
+        return self.response
+            
+    def getBotResponse(self,message_tolower,prediction):
+        """
+        method to predict the response if the prediction
+        of the incoming message was among the following:
+        self.hello_bot = ['bot_aciton','bot_author','bot_name','bot_version','hello']
+        
+        the response will be generated using the responses,csv
+        or the hello_bot.csv
+        """
+        if message_tolower.endswith('?'):
+            message_tolower = message_tolower.replace('?','')
+        
+        df = pd.read_csv("..\\responses\\hello_bot.csv")
+        
+        df = df[df.class_name == prediction]
+        
+        for index,message in zip(df['message'].index,df['message'].values):
+            df.set_value(index,'percentage_match',sim(message,message_tolower))
+        
+        ndf = df.sort_values('percentage_match',ascending=False)
+        
+        apt_response = ndf['response1'].iloc[0]
+        
+        return apt_response
+        
 
 """ 
 There is no need to train the bot as the bot is trained automatically before 
@@ -77,5 +125,3 @@ bot = NSITBot(
     owner="Manish Devgan",
     version="0.0.1" 
 )
-
-
