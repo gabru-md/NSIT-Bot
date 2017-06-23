@@ -1,6 +1,6 @@
 from fuzzywuzzy import fuzz
 import pandas as pd
-
+import os
 from trainer import trainer as Train
 
 """
@@ -22,6 +22,7 @@ class NSITBot(object):
         self.__owner__ = kwargs.get('owner','NSIT 2020')
         
         self.__version__ = kwargs.get('version','Test')
+        
         
         """
         creating an instance of trainer inside NSITBot
@@ -94,7 +95,7 @@ class NSITBot(object):
         if message_tolower.endswith('?'):
             message_tolower = message_tolower.replace('?','')
         
-        df = pd.read_csv("..\\responses\\hello_bot.csv")
+        df = pd.read_csv("responses\\hello_bot.csv")
         
         df = df[df.class_name == prediction]
         

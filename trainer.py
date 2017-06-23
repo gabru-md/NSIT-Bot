@@ -59,7 +59,10 @@ class trainer(object):
         Checking for each training file 
         """
         #os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
-        new_loc = os.getcwd()
+        self.old_loc = os.getcwd()
+        
+        new_loc = os.getcwd() + "\\" + path
+        
         os.chdir(new_loc)
         list_trainer_files = os.listdir(new_loc)
         dataList = []
@@ -91,29 +94,12 @@ class trainer(object):
         return DataFrame(dataList)
         
         
-    def checkifcorrectPath(self,path):
-        """
-        method to check if the path is correct.
-        """
-        try:
-            old_path = os.getcwd()
-            new_path = os.getcwd() + "\\" + path
-            os.chdir(new_path)
-        except Exception as e:
-            return False
-        
-        list_trainers = os.listdir(new_path)
-        os.chdir(old_path)
-        if len(list_trainers) == 0:
-            return True
-        else:
-            return False
 
     def getClassifier(self,**kwargs):
         """
         returns a vectorizer to predict the query
         """
-        
+
         self.path = kwargs.get('path','trainer')
         self.df = self.trainWith(self.path)
         
@@ -128,5 +114,6 @@ class trainer(object):
         self.classifier.fit(counts, targets) 
         
 
-        
+        os.chdir(self.old_loc)
         return self.classifier,self.vectorizer
+
