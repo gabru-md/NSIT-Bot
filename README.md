@@ -16,13 +16,19 @@ The Purpose of this Bot Engine is to provide instant solutions, on the mobile ch
 [FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy) here.
 
 # To Run
-
+## Windows Users:
 Note: make sure that the working directory is your current one!
 
 ```sh
 $ python trainer.py
 $ python nsitbot.py
 $ python test.py
+```
+## Linux Users
+
+```sh
+$ chmod +x ./bot.sh
+$ ./bot.sh
 ```
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
