@@ -15,6 +15,15 @@ The Purpose of this Bot Engine is to provide instant solutions, on the mobile ch
 
 [FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy) here.
 
+# To Run
+
+Note: make sure that the working directory is your current one!
+
+```sh
+$ python trainer.py
+$ python nsitbot.py
+$ python test.py
+```
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
 Site will act as a webHook for the Telegram bot. So backend developers in Python/PHP are required. 
