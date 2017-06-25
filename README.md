@@ -34,11 +34,11 @@ $ ./bot.sh
 ```
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
-Site will act as a webHook for the Telegram bot. So backend developers in Python/PHP are required. 
-#### Either of the three
+Site will act as a webHook for the Telegram bot. So backend developers in Python/~~PHP~~ are required. 
+#### Either of the ~~three~~ two
     * Flask
     * Django
-    * PHP
+~~PHP~~
 
 Backend will be FCFS.
 
