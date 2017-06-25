@@ -95,7 +95,7 @@ class NSITBot(object):
         if message_tolower.endswith('?'):
             message_tolower = message_tolower.replace('?','')
         
-        df = pd.read_csv("responses\\hello_bot.csv")
+        df = pd.read_csv("PATH TO 'hello_bot.csv'")
         
         df = df[df.class_name == prediction]
         
