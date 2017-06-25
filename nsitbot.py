@@ -187,8 +187,9 @@ class NSITBot(object):
         
         sortedDF = newDF.sort_values('rating',ascending=False)
         apt_comment = sortedDF['comment_message'].iloc[0]
+        apt_author = sortedDF['comment_author'].iloc[0]
         
-        return apt_comment
+        return [apt_comment,apt_author]
                 
             
         
@@ -219,6 +220,9 @@ class NSITBot(object):
         
         best_Response = self.getBest_Response(queryID,queryAuthor)
         
+        """
+        best_response conatins ==> [response,author]
+        """
         return best_Response
         
 """ 
