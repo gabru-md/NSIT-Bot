@@ -61,7 +61,7 @@ class trainer(object):
         #os.chdir('C:\Users\Manish\Desktop\NSIT-Bot\Bot')
         self.old_loc = os.getcwd()
         
-        new_loc = os.getcwd() + "\\" + path
+        new_loc = os.getcwd() + "/" + path
         
         os.chdir(new_loc)
         list_trainer_files = os.listdir(new_loc)
