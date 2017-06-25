@@ -158,7 +158,8 @@ class NSITBot(object):
         
         commentDataFrame = pd.read_csv('PATH TO COMMENT CSV')
         
-        newDF = commentDataFrame[commentDataFrame.status_id == queryID and commentDataFrame.comment_author != queryAuthor]
+        newDF = commentDataFrame[commentDataFrame.status_id == queryID]
+        newDF = newDF[newDF.comment_author != queryAuthor]
         
         """
         newDF is the new DF which 
@@ -175,7 +176,7 @@ class NSITBot(object):
         'rating' will be used to rate each and every 
         comment and then the best of all will be chosen.
         """
-        for index,likes,loves,wows,hahas,sads,angrys in zip(newDF['comment_likes'].index,newDF['num_likes'].values,newDF['num_loves'].values,newDF['num_wows'].values,newDF['num_hahas'].values,newDF['num_sads'].values,newDF['num_angrys'].values):
+        for index,likes,loves,wows,hahas,sads,angrys in zip(newDF['num_likes'].index,newDF['num_likes'].values,newDF['num_loves'].values,newDF['num_wows'].values,newDF['num_hahas'].values,newDF['num_sads'].values,newDF['num_angrys'].values):
             rating = float(1*int(likes) + 0.5*int(loves) + 1.5*(wows) - (int(angrys) + int(sads)) - 1.5*int(hahas))
             newDF.set_value(index,'rating',rating)
         
