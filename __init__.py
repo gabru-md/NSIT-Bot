@@ -14,7 +14,7 @@ from .nsitbot import NSITBot
 __version__ will remain under 0.1.0
 until this is officially released.
 """
-__version__ = '0.0.3/alpha'
+__version__ = '0.0.3'
 __author__ = 'Manish Devgan'
 __email__ = 'manish.nsit8@gmail.com'
 __github__ = 'https://github.com/gabru-md'

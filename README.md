@@ -1,5 +1,7 @@
 ![NSIT-Bot](https://github.com/gabru-md/NSIT-Bot/blob/master/resources/images/NSIT-Bot.jpg?raw=true)
 
+![travis](https://travis-ci.org/gabru-md/NSIT-Bot.svg?branch=master) [![CRAN](https://img.shields.io/cran/l/devtools.svg)]()
+
 # NSIT-Bot
 
 [NSIT Bot](https://github.com/gabru-md/NSIT-Bot) is a chatter bot engine built using standard Machine Learning techniques and [Telegram](https://telegram.org/) Bot API.
