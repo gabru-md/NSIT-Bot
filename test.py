@@ -18,7 +18,7 @@ bot = NSITBot(
     version="0.0.1" 
 )
 
-incoming_message = "Hi there"
+incoming_message = str(raw_input("Message: "))
 
 response = bot.generateResponse(bot.predict(incoming_message))
 
