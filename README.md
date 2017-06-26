@@ -1,6 +1,6 @@
 ![NSIT-Bot](https://github.com/gabru-md/NSIT-Bot/blob/master/resources/images/NSIT-Bot.jpg?raw=true)
 
-![travis](https://travis-ci.org/gabru-md/NSIT-Bot.svg?branch=master)
+![travis](https://travis-ci.org/gabru-md/NSIT-Bot.svg?branch=master) [![CRAN](https://img.shields.io/cran/l/devtools.svg)]() ![python](https://img.shields.io/badge/python-2.7-red.svg) ![platform](https://img.shields.io/badge/os-linux-lightgrey.svg)
 
 # NSIT-Bot
 
@@ -34,11 +34,11 @@ $ ./bot.sh
 ```
 The app will be deployed on [Heroku](https://www.heroku.com/).
 
-Site will act as a webHook for the Telegram bot. So backend developers in Python/PHP are required. 
-#### Either of the three
+Site will act as a webHook for the Telegram bot. So backend developers in Python/~~PHP~~ are required. 
+#### Either of the ~~three~~ two
     * Flask
     * Django
-    * PHP
+~~PHP~~
 
 Backend will be FCFS.
 
